@@ -1,0 +1,14 @@
+{
+  "@types/jest": "latest",
+  "@types/react-native": "latest",
+  "@types/react-test-renderer": "latest",
+  "@types/react": "latest",
+  "@types/styled-components": "latest",
+  "babel-plugin-module-resolver": "latest",
+  "eslint-plugin-typescript": "latest",
+  "ts-jest": "latest",
+  "typescript": "latest",
+  "typescript-eslint-parser": "latest",
+  "standard": "latest",
+  "snazzy": "latest"
+}
