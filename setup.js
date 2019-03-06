@@ -11,6 +11,7 @@ const deleteFile = fileName => fs.unlinkSync(path.join(__dirname, fileName))
 const writeFile = (fileName, data) => fs.writeFileSync(path.join(__dirname, fileName), data)
 const makeDir = (dir, data) => !fs.existsSync(dir) && fs.mkdirSync(dir, { recursive: true })
 const writeDir = (dirname, fileName, data) => { makeDir(path.join(__dirname, dirname)); writeFile(path.join(dirname, fileName), data) }
+const deleteDir = dir => fs.rmdirSync(path.join(__dirname, dir))
 
 const replaceContent = (fileName, charset, searchValue, replaceValue) => {
   const content = fs.readFileSync(path.join(__dirname, fileName), charset).replace(searchValue, replaceValue)
@@ -33,6 +34,8 @@ deleteFile('.flowconfig')
 deleteFile('.travis.yml')
 deleteFile('App.js')
 deleteFile('__tests__/App.js')
+deleteDir('__tests__')
+
 deleteFile('jest.json')
 deleteFile('standard.json')
 deleteFile('index.js')
