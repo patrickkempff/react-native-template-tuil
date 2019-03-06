@@ -31,7 +31,7 @@ packageJson.jest = Object.assign({}, packageJson.jest, jestConfig)
 writeFile('package.json', JSON.stringify(packageJson, null, 2))
 
 deleteFile('.flowconfig')
-deleteFile('.travis.yml')
+// deleteFile('.travis.yml')
 deleteFile('App.js')
 deleteFile('__tests__/App.js')
 deleteDir('__tests__')
