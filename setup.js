@@ -46,7 +46,7 @@ deleteFile('LICENSE')
 deleteFile('README.md')
 // deleteFile('package-lock.json')
 deleteFile('.buckconfig')
-deleteFile('.npmignore')
+// deleteFile('.npmignore')
 deleteFile('setup.js')
 
 console.log(`🔨Fixing StandardJS compliance...`)
