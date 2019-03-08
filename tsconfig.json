@@ -10,6 +10,7 @@
     "noEmit": true,
     "strict": true,
     "target": "esnext",
+    "types": ["react", "react-native", "jest", "styled-components", "react-test-renderer"],
     "baseUrl": "./",
     "paths": {
       "@domains/*": ["src/domains/*"],
