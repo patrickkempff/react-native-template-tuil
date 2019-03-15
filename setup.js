@@ -33,7 +33,7 @@ writeFile('package.json', JSON.stringify(packageJson, null, 2))
 deleteFile('.flowconfig')
 // deleteFile('.travis.yml')
 deleteFile('App.js')
-deleteFile('__tests__/App.js')
+deleteFile('__tests__/App-test.js')
 deleteDir('__tests__')
 
 deleteFile('jest.json')

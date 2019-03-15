@@ -17,5 +17,5 @@
       "@app/*": ["src/app/*"]
     }
   },
-  "exclude": ["node_modules", "babel.config.js"]
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"],
 }
