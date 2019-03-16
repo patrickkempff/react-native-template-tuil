@@ -1,9 +1,8 @@
 const fs = require('fs')
 const path = require('path')
-const execSync = require('child_process').execSync;
+const execSync = require('child_process').execSync
 
 const packageJson = require('./package.json')
-const jestConfig = require('./jest.json')
 const standardConfig = require('./standard.json')
 const app = require('./app.json')
 
@@ -23,10 +22,8 @@ replaceContent(`android/app/src/main/java/com/${app.name.toLowerCase()}/MainAppl
 
 console.log('🔄 Setting up...')
 
-packageJson.scripts.tsc = 'tsc'
-packageJson.scripts.lint = 'standard **/*.{ts,tsx,js,jsx} | yarn snazzy'
+packageJson.scripts.lint = 'standard **/*.{ts,tsx,js,jsx} | yarn snazzy && yarn tsc'
 packageJson.standard = Object.assign({}, packageJson.standard, standardConfig)
-packageJson.jest = Object.assign({}, packageJson.jest, jestConfig)
 
 writeFile('package.json', JSON.stringify(packageJson, null, 2))
 
@@ -36,7 +33,6 @@ deleteFile('App.js')
 deleteFile('__tests__/App-test.js')
 deleteDir('__tests__')
 
-deleteFile('jest.json')
 deleteFile('standard.json')
 deleteFile('index.js')
 deleteFile('LICENSE')

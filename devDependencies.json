@@ -6,7 +6,6 @@
   "@types/styled-components": "latest",
   "babel-plugin-module-resolver": "latest",
   "eslint-plugin-typescript": "latest",
-  "ts-jest": "latest",
   "typescript": "latest",
   "typescript-eslint-parser": "latest",
   "standard": "latest",
