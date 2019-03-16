@@ -11,8 +11,9 @@ node_js:
 
 sudo: false
 
-before_script:
+install:
   - yarn global add react-native-cli
 
 script:
-  - react-native init TestApp
+  - react-native init TestApp --template tuil
+  - cd TestApp && node setup.js
