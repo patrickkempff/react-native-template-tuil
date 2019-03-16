@@ -1,13 +1,18 @@
 language: node_js
-node_js:
-  - "node"
+
 cache:
+  yarn: true
   directories:
     - "node_modules"
-deploy:
-  on:
-    tags: true
-  provider: npm
-  email: "emin@emin.ch"
-  api_key: "${NPM_TOKEN}"
-  skip_cleanup: true
+
+node_js:
+  - 10
+  - 11
+
+sudo: false
+
+before_script:
+  - yarn global add react-native-cli
+
+script:
+ — react-native init TestApp --template tuil && cd TestApp && node setup.js
