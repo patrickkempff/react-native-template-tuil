@@ -15,4 +15,4 @@ before_script:
   - yarn global add react-native-cli
 
 script:
- — react-native init TestApp --template tuil && cd TestApp && node setup.js
+ — react-native init TestApp
