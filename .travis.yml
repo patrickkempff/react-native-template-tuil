@@ -16,7 +16,7 @@ install:
 
 before_script:
   - if [[ $rn_version = 'stable' ]]; then react-native init TestApp --template tuil && cd TestApp; fi
-  - if [[ $rn_version != 'stable' ]]; react-native init TestApp --template tuil --version "react-native@$rn_version" && cd TestApp; fi
+  - if [[ $rn_version != 'stable' ]]; then react-native init TestApp --template tuil --version "react-native@$rn_version" && cd TestApp; fi
 
 script:
   - cat package.json
