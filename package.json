@@ -3,7 +3,7 @@
   "version": "0.2.3",
   "description": "React Native template for a quick start with TypeScript, Standard, Jest and styled-components.",
   "scripts": {
-    "install": "node postinstall.js",
+    "postinstall": "node postinstall.js",
     "test": "standard setup.js",
     "prepublishOnly": "npm --no-git-tag-version version $TRAVIS_TAG"
   },
