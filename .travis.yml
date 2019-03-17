@@ -12,15 +12,34 @@ node_js:
 sudo: false
 
 install:
-  - yarn global add react-native-cli
+  - yarn global add react-native-cli;
 
 before_script:
-  - react-native init TestApp --template tuil && cd TestApp
+  - if [[ $rn_version = 'stable' ]]; then react-native init TestApp --template tuil && cd TestApp; fi
+  - if [[ $rn_version != 'stable' ]]; react-native init TestApp --template tuil --version "react-native@$rn_version" && cd TestApp; fi
 
 script:
   - cat package.json
-  - node setup.js
 
 after_script:
   - yarn test
   - yarn lint
+
+matrix:
+  include:
+    - node_js: 10
+      env: rn_version=stable
+    - node_js: 11
+      env: rn_version=stable
+    - node_js: 10
+      env: rn_version=0.59.0
+    - node_js: 11
+      env: rn_version=0.59.0
+    - node_js: 10
+      env: rn_version=0.59.1
+    - node_js: 11
+      env: rn_version=0.59.1
+  allow_failures:
+    - node_js: 11
+      env: rn_version=next
+  fast_finish: true
