@@ -2,6 +2,11 @@ const fs = require('fs')
 const path = require('path')
 const execSync = require('child_process').execSync
 
+if (fs.existsSync(path.join(__dirname, '.npmignore'))) {
+  process.exit()
+}
+
+
 const packageJson = require('./package.json')
 const standardConfig = require('./standard.json')
 const app = require('./app.json')
