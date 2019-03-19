@@ -79,4 +79,4 @@ projectFilesToDelete.forEach(filePath => deletePath(path.join(projectRoot, fileP
 deletePath('postinstall.js')
 
 // Make sure we are standardjs compliant
-execSync('yarn standard **/*.{ts,tsx,js,jsx} --fix', {stdio: 'inherit'})
+execSync(`cd ${projectRoot} && yarn standard **/*.{ts,tsx,js,jsx} --fix`, {stdio: 'inherit'})
