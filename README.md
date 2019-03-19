@@ -1,4 +1,5 @@
 # :zap: React Native Template Tuil
+**Please note that this is WIP and will break from time to time**
 
 [![NPM version][npm-version-image]][npm-url] [![MIT License][license-image]][license] [![Build Status][travis-image]][travis-url]
 
