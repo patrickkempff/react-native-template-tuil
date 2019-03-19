@@ -1,7 +1,7 @@
 
 const fs = require('fs')
 const path = require('path')
-const execSync = require('child_process').execSync
+const { execSync } = require('child_process')
 
 //
 //  ████████╗██╗   ██╗██╗██╗
@@ -77,3 +77,6 @@ projectFilesToDelete.forEach(filePath => deletePath(path.join(projectRoot, fileP
 
 // Remove this script.
 deletePath('postinstall.js')
+
+// Make sure we are standardjs compliant
+execSync('yarn standard **/*.{ts,tsx,js,jsx} --fix', {stdio: 'inherit'})
