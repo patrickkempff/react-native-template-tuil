@@ -70,7 +70,7 @@ packageJson.scripts.lint = 'standard **/*.{ts,tsx,js,jsx} | yarn snazzy && yarn 
 // This is a a very ugly hack, but we are checking if jest is installed. If this is the case, we are at
 // the end of the install procedure and we are ready to run standard --fix. This ensures the official
 // react-native template files to be standard compliant. We will remove this postinstall hook after running it.
-packageJson.scripts.postinstall = `[ -f node_modules/.bin/jest ] && node ${projectRoot}/finalize.js`
+packageJson.scripts.postinstall = `ls node_modules/.bin && [ -f node_modules/.bin/jest ] && node ${projectRoot}/finalize.js`
 
 packageJson.standard = Object.assign({}, packageJson.standard, standardConfig)
 
