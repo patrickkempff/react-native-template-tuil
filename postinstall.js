@@ -16,7 +16,7 @@ const { execSync } = require('child_process')
 // initialized when running react-native init. In this case
 // .npmignore will not exist becsuse it is not published to npmjs.com.
 if (fs.existsSync(path.join(__dirname, '.npmignore'))) {
-  // process.exit()
+  process.exit()
 }
 
 // This script is run from node_modules/react-native-template-tuil so we
