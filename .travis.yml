@@ -41,11 +41,9 @@ install:
 
   - yarn global add react-native-cli
 
+before_script:
+  - react-native init TestApp --template tuil --version $REACT_NATIVE_VERSION && cd TestApp
 
 script:
-  - react-native init TestApp --version $REACT_NATIVE_VERSION --template tuil
-  - cd TestApp
   - cat package.json
-
-  - yarn test
   - yarn lint
