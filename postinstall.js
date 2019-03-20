@@ -16,7 +16,7 @@ const { execSync } = require('child_process')
 // initialized when running react-native init. In this case
 // .npmignore will not exist becsuse it is not published to npmjs.com.
 if (fs.existsSync(path.join(__dirname, '.npmignore'))) {
-  process.exit()
+  // process.exit()
 }
 
 // This script is run from node_modules/react-native-template-tuil so we
@@ -66,6 +66,12 @@ const packageJson = require(path.join(projectRoot, 'package.json'))
 const standardConfig = require('./standard.json')
 
 packageJson.scripts.lint = 'standard **/*.{ts,tsx,js,jsx} | yarn snazzy && yarn tsc'
+
+// This is a a very ugly hack, but we are checking if jest is installed. If this is the case, we are at
+// the end of the install procedure and we are ready to run standard --fix. This ensures the official
+// react-native template files to be standard compliant. We will remove this postinstall hook after running it.
+packageJson.scripts.postinstall = `[ -f node_modules/.bin/jest ] && node ${projectRoot}/finalize.js`
+
 packageJson.standard = Object.assign({}, packageJson.standard, standardConfig)
 
 writeFile(path.join(projectRoot, 'package.json'), JSON.stringify(packageJson, null, 2))
@@ -77,6 +83,3 @@ projectFilesToDelete.forEach(filePath => deletePath(path.join(projectRoot, fileP
 
 // Remove this script.
 deletePath('postinstall.js')
-
-// Make sure we are standardjs compliant
-execSync(`cd ${projectRoot} && yarn standard **/*.{ts,tsx,js,jsx} --fix`, {stdio: 'inherit'})

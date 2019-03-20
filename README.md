@@ -18,7 +18,7 @@ react-native init MyApp --template tuil
 
 ## Lots of ❤️ and credits to the owners and maintainers of these packages:
 
-[react-native-template-typescript](https://github.com/emin93/react-native-template-typescript) for the awesome typescript templatw
+[react-native-template-typescript](https://github.com/emin93/react-native-template-typescript) for the awesome typescript template
 
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg
 [license]: LICENSE
