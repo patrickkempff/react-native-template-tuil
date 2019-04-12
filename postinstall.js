@@ -54,12 +54,13 @@ const replaceFileContents = (filePath, searchValue, replaceValue) => {
 const app = require(path.join(projectRoot, 'app.json'))
 
 const iosAppDir = path.join(projectRoot, 'ios', app.name)
-const androidAppDir = path.join(projectRoot, 'android', 'app', 'src', 'main', 'java', 'com', app.name.toLowerCase())
+const androidAppDir = path.join(projectRoot, 'android', 'app')
+const androidPackageDir = path.join(androidAppDir, 'src', 'main', 'java', 'com', app.name.toLowerCase())
 
 // Modify the entry point to src/index instead of index.
 replaceFileContents(path.join(iosAppDir, 'AppDelegate.m'), 'jsBundleURLForBundleRoot:@"index"', 'jsBundleURLForBundleRoot:@"src/index"')
-replaceFileContents(path.join(androidAppDir, 'MainApplication.java'), '"index"', '"src/index"')
-
+replaceFileContents(path.join(androidPackageDir, 'MainApplication.java'), '"index"', '"src/index"')
+replaceFileContents(path.join(androidAppDir, 'build.gradle'), 'entryFile: "index.js"', 'entryFile: "src/index.js"')
 
 // Update the package.json to include standard.
 const packageJson = require(path.join(projectRoot, 'package.json'))
@@ -79,7 +80,6 @@ writeFile(path.join(projectRoot, 'package.json'), JSON.stringify(packageJson, nu
 // Lets delete unneeded files / directories
 templateFilesToDelete.forEach(filePath => deletePath(path.join(__dirname, filePath)))
 projectFilesToDelete.forEach(filePath => deletePath(path.join(projectRoot, filePath)))
-
 
 // Remove this script.
 deletePath('postinstall.js')
