@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-tuil",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "React Native template for a quick start with TypeScript, Standard, Jest and styled-components.",
   "scripts": {
     "postinstall": "node postinstall.js",
