@@ -30,6 +30,18 @@ matrix:
       env: REACT_NATIVE_VERSION=react-native@0.59.1
     - node_js: 11
       env: REACT_NATIVE_VERSION=react-native@0.59.1
+    - node_js: 10
+      env: REACT_NATIVE_VERSION=react-native@0.59.2
+    - node_js: 11
+      env: REACT_NATIVE_VERSION=react-native@0.59.2
+    - node_js: 10
+      env: REACT_NATIVE_VERSION=react-native@0.59.3
+    - node_js: 11
+      env: REACT_NATIVE_VERSION=react-native@0.59.3
+    - node_js: 10
+      env: REACT_NATIVE_VERSION=react-native@0.59.4
+    - node_js: 11
+      env: REACT_NATIVE_VERSION=react-native@0.59.4
   fast_finish: true
 
 
