@@ -66,7 +66,9 @@ replaceFileContents(path.join(androidAppDir, 'build.gradle'), 'entryFile: "index
 const packageJson = require(path.join(projectRoot, 'package.json'))
 const standardConfig = require('./standard.json')
 
-packageJson.scripts.lint = 'standard **/*.{ts,tsx,js,jsx} | yarn snazzy && yarn tsc'
+packageJson.scripts['codequality'] = 'yarn lint && yarn tsc'
+packageJson.scripts['lint'] = 'yarn lint:editorconfig && standard **/*.{ts,tsx,js,jsx} | yarn snazzy'
+packageJson.scripts['lint:editorconfig'] = 'yarn eclint check "{src,jest}/{**/*,*}.{js,json}"'
 
 // This is a a very ugly hack, but we are checking if jest is installed. If this is the case, we are at
 // the end of the install procedure and we are ready to run standard --fix. This ensures the official
