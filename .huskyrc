@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "pre-commit": "yarn run codequality",
+    "pre-push": "yarn run codequality"
+  }
+}
