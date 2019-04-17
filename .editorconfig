@@ -23,3 +23,14 @@ indent_size = 1
 
 [*.gradle]
 indent_size = 4
+
+# Unfortunately Xcode does not support editorconfig,
+# with or without a plugin. So lets go ahead and ignore
+# the ident_style (tabs vs spaces)
+[ios/**]
+indent_style = ignore
+
+# Lets ignore the indent style because objc code
+# uses a really different way of identing.
+[ios/**/*.{m,h}]
+indent_size = ignore
