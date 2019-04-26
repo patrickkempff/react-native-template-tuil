@@ -34,7 +34,7 @@ execSync(`cd ${projectRoot} && yarn eclint fix`, { stdio: 'inherit' })
 
 // Run standard to make sure all the react-native official template files
 // are compliant with standard or fix them if where possible.
-execSync(`cd ${projectRoot} && yarn standard *.{ts,tsx,js,jsx} --fix`, { stdio: 'inherit' })
+execSync(`cd ${projectRoot} && yarn eslint --ext .ts,.js,.tsx,.jsx . --fix`, { stdio: 'inherit' })
 
 // Delete this script, and we are ready to go!
 deletePath('finalize.js')
