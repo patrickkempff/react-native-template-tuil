@@ -28,7 +28,7 @@ const projectRoot = path.join(__dirname, '..', '..')
 const templateFilesToDelete = ['README.md', 'LICENSE']
 // Because we base this template on the official react-native version, there are
 // some files we needed remove because we are supplying our own versions.
-const projectFilesToDelete = ['.flowconfig', 'index.js', 'standard.json', 'App.js', '__tests__/App-test.js', '__tests__']
+const projectFilesToDelete = ['.flowconfig', 'index.js', 'App.js', '__tests__/App-test.js', '__tests__']
 
 const deletePath = filePath => {
   if (!fs.existsSync(filePath)) {
@@ -62,12 +62,10 @@ replaceFileContents(path.join(iosAppDir, 'AppDelegate.m'), 'jsBundleURLForBundle
 replaceFileContents(path.join(androidPackageDir, 'MainApplication.java'), '"index"', '"src/index"')
 replaceFileContents(path.join(androidAppDir, 'build.gradle'), 'entryFile: "index.js"', 'entryFile: "src/index.js"')
 
-// Update the package.json to include standard.
 const packageJson = require(path.join(projectRoot, 'package.json'))
-const standardConfig = require('./standard.json')
 
 packageJson.scripts['codequality'] = 'yarn lint && yarn tsc'
-packageJson.scripts['lint'] = 'yarn lint:editorconfig && standard *.{ts,tsx,js,jsx} | yarn snazzy'
+packageJson.scripts['lint'] = 'yarn lint:editorconfig && yarn eslint --ext .ts,.js,.tsx,.jsx .'
 packageJson.scripts['lint:editorconfig'] = 'yarn eclint check'
 packageJson.scripts['lint:editorconfig:fix'] = 'yarn eclint fix'
 
@@ -75,8 +73,6 @@ packageJson.scripts['lint:editorconfig:fix'] = 'yarn eclint fix'
 // the end of the install procedure and we are ready to run standard --fix. This ensures the official
 // react-native template files to be standard compliant. We will remove this postinstall hook after running it.
 packageJson.scripts.postinstall = `[ -f node_modules/.bin/jest ] && node ${projectRoot}/finalize.js || echo 'skipping...'`
-
-packageJson.standard = Object.assign({}, packageJson.standard, standardConfig)
 
 writeFile(path.join(projectRoot, 'package.json'), JSON.stringify(packageJson, null, 2))
 

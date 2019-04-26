@@ -4,12 +4,12 @@
   "@types/react-test-renderer": "latest",
   "@types/react": "latest",
   "@types/styled-components": "latest",
+  "@typescript-eslint/eslint-plugin": "latest",
+  "@typescript-eslint/parser": "latest",
   "babel-plugin-module-resolver": "latest",
   "eclint": "latest",
-  "eslint-plugin-typescript": "latest",
+  "eslint": "latest",
+  "eslint-config-tuil": "latest",
   "husky": "latest",
-  "typescript": "latest",
-  "typescript-eslint-parser": "latest",
-  "standard": "latest",
-  "snazzy": "latest"
+  "typescript": "latest"
 }
