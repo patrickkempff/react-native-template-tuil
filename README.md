@@ -27,4 +27,4 @@ react-native init MyApp --template tuil
 [travis-image]: https://travis-ci.org/patrickkempff/react-native-template-tuil.svg?branch=master
 
 [npm-url]: https://npmjs.org/package/react-native-template-tuil
-[npm-version-image]: https://badge.fury.io/gh/patrickkempff%2Freact-native-template-tuil.svg
+[npm-version-image]: https://badge.fury.io/js/react-native-template-tuil.svg
