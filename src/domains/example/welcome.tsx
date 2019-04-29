@@ -3,7 +3,7 @@
  * https://github.com/facebook/react-native
  *
  * Generated with the TypeScript template
- * https://github.com/emin93/react-native-template-typescript
+ * https://github.com/patrickkempff/react-native-template-tuil
  *
  * @format
  */
@@ -19,20 +19,6 @@ const instructions = Platform.select({
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu'
 })
-
-interface Props {}
-export default class Welcome extends Component<Props> {
-  render () {
-    return (
-      <View style={styles.container}>
-        <Example />
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit src/domains/example/placeholder.tsx</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    )
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -52,3 +38,16 @@ const styles = StyleSheet.create({
     marginBottom: 5
   }
 })
+
+export default class Welcome extends Component<{}> {
+  render () {
+    return (
+      <View style={styles.container}>
+        <Example text='Tuil' />
+        <Text style={styles.welcome}>Welcome to React Native!</Text>
+        <Text style={styles.instructions}>To get started, edit src/domains/example/placeholder.tsx</Text>
+        <Text style={styles.instructions}>{instructions}</Text>
+      </View>
+    )
+  }
+}
