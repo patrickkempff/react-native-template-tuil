@@ -28,13 +28,13 @@ packageJson.scripts.postinstall = undefined
 
 writeFile(path.join(projectRoot, 'package.json'), JSON.stringify(packageJson, null, 2))
 
+// Delete this script, and we are ready to go!
+deletePath('finalize.js')
+
 // Some files of the default template are not compliant to our editorconfig. So lets go ahead
 // and run eclint fix, to make the files compliant to the settings in .editorconfig.
 execSync(`cd ${projectRoot} && yarn eclint fix`, { stdio: 'inherit' })
 
 // Run standard to make sure all the react-native official template files
 // are compliant with standard or fix them if where possible.
-execSync(`cd ${projectRoot} && yarn eslint --ext .ts,.js,.tsx,.jsx . --fix`, { stdio: 'inherit' })
-
-// Delete this script, and we are ready to go!
-deletePath('finalize.js')
+execSync(`cd ${projectRoot} && yarn eslint --fix --ext .ts,.js,.tsx,.jsx .`, { stdio: 'inherit' })
