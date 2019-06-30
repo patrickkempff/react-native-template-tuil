@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [ 'tuil' ],
+  extends: ['tuil/recommended'],
   // Because we are linting a typescript project make sure eslint
   // does parse the our typescript files.
   parser: '@typescript-eslint/parser',
