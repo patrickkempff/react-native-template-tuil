@@ -35,16 +35,12 @@ matrix:
       env: REACT_NATIVE_VERSION=react-native@0.60.0
   fast_finish: true
 
-
-install:
-
-
 before_script:
   - export TEMPLATE_PATH="$(pwd)"
   - cd ..
-  - npx react-native init TestApp --template=$TEMPLATE_PATH && cd TestApp
+  - npx react-native init TestApp --template=$TEMPLATE_PATH
+  - cd TestApp
 
 script:
   - cat package.json
   - yarn codequality
-  - npx react-native run-ios
