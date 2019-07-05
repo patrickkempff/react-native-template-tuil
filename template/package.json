@@ -6,6 +6,7 @@
     "start": "react-native start",
     "codequality": "yarn lint && yarn jest && yarn tsc",
     "lint": "eslint .",
+    "lint:editorconfig": "editorconfig-checker",
     "test": "jest"
   },
   "dependencies": {
@@ -22,7 +23,7 @@
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "babel-plugin-module-resolver": "latest",
-    "eclint": "latest",
+    "editorconfig-checker": "2.1.0",
     "eslint": "latest",
     "eslint-config-tuil": "latest",
     "husky": "latest",

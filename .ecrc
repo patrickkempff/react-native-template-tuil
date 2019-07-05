@@ -1,0 +1,10 @@
+# extensions
+.bat$
+.DS_Store$
+.lock$
+.keystore$
+
+# folders
+node_modules
+# xcode does not support editorconfig, so lets exclude ios as a whole.
+ios
