@@ -45,7 +45,8 @@ install:
   # - yarn global add react-native-cli
 
 before_script:
-  - pwd
+  - cd ..
+  - npx react-native init TestApp --template=/home/travis/build/patrickkempff/react-native-template-tuil
   # - npx react-native init TestApp --template=tuil
   # - react-native init TestApp --template tuil --version $REACT_NATIVE_VERSION && cd TestApp
 
