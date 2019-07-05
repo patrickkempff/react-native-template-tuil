@@ -1,35 +1,34 @@
 {
-  "name": "react-native-template-tuil",
-  "version": "0.6.3",
-  "description": "React Native template for a quick start with TypeScript, Standard, Jest and styled-components.",
-  "scripts": {
-    "postinstall": "node postinstall.js",
-    "test": "standard setup.js",
-    "prepublishOnly": "npm --no-git-tag-version version $TRAVIS_TAG"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/patrickkempff/react-native-template-tuil.git"
-  },
-  "keywords": [
-    "react-native",
-    "typescript",
-    "Standard",
-    "styled-components",
-    "jest",
-    "template",
-    "boilerplate"
-  ],
-  "author": "Patrick Kempff <patrickkempff@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/patrickkempff/react-native-template-tuil/issues"
-  },
-  "homepage": "https://github.com/patrickkempff/react-native-template-tuil#readme",
-  "depedencies": {
-    "replace": "1.1.0"
-  },
-  "devDependencies": {
-    "standard": "12.0.1"
+    "name": "react-native-template-tuil",
+    "version": "0.6.3",
+    "description": "Clean and minimalist React Native template for a quick start with TypeScript.",
+    "scripts": {
+      "lint": "standard postinstall.js",
+      "prepublishOnly": "npm --no-git-tag-version version $TRAVIS_TAG"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/patrickkempff/react-native-template-tuil.git"
+    },
+    "keywords": [
+      "react-native",
+      "typescript",
+      "Standard",
+      "styled-components",
+      "jest",
+      "template",
+      "boilerplate"
+    ],
+    "author": "Patrick Kempff <patrickkempff@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/patrickkempff/react-native-template-tuil/issues"
+    },
+    "homepage": "https://github.com/patrickkempff/react-native-template-tuil#readme",
+    "depedencies": {
+      "replace": "1.1.0"
+    },
+    "devDependencies": {
+      "standard": "12.0.1"
+    }
   }
-}

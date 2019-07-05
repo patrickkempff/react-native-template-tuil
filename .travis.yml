@@ -17,35 +17,22 @@ matrix:
       env: REACT_NATIVE_VERSION=react-native@latest
     - node_js: 11
       env: REACT_NATIVE_VERSION=react-native@latest
+    - node_js: 12
+      env: REACT_NATIVE_VERSION=react-native@latest
     - node_js: 10
       env: REACT_NATIVE_VERSION=react-native@next
     - node_js: 11
       env: REACT_NATIVE_VERSION=react-native@next
+    - node_js: 12
+      env: REACT_NATIVE_VERSION=react-native@next
+
     # Previous react-native versions
     - node_js: 10
-      env: REACT_NATIVE_VERSION=react-native@0.59.0
+      env: REACT_NATIVE_VERSION=react-native@0.60.0
     - node_js: 11
-      env: REACT_NATIVE_VERSION=react-native@0.59.0
-    - node_js: 10
-      env: REACT_NATIVE_VERSION=react-native@0.59.1
-    - node_js: 11
-      env: REACT_NATIVE_VERSION=react-native@0.59.1
-    - node_js: 10
-      env: REACT_NATIVE_VERSION=react-native@0.59.2
-    - node_js: 11
-      env: REACT_NATIVE_VERSION=react-native@0.59.2
-    - node_js: 10
-      env: REACT_NATIVE_VERSION=react-native@0.59.3
-    - node_js: 11
-      env: REACT_NATIVE_VERSION=react-native@0.59.3
-    - node_js: 10
-      env: REACT_NATIVE_VERSION=react-native@0.59.4
-    - node_js: 11
-      env: REACT_NATIVE_VERSION=react-native@0.59.4
-    - node_js: 10
-      env: REACT_NATIVE_VERSION=react-native@0.59.5
-    - node_js: 11
-      env: REACT_NATIVE_VERSION=react-native@0.59.5
+      env: REACT_NATIVE_VERSION=react-native@0.60.0
+    - node_js: 12
+      env: REACT_NATIVE_VERSION=react-native@0.60.0
   fast_finish: true
 
 
@@ -55,10 +42,12 @@ install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
 
-  - yarn global add react-native-cli
+  # - yarn global add react-native-cli
 
 before_script:
-  - react-native init TestApp --template tuil --version $REACT_NATIVE_VERSION && cd TestApp
+  - pwd
+  # - npx react-native init TestApp --template=tuil
+  # - react-native init TestApp --template tuil --version $REACT_NATIVE_VERSION && cd TestApp
 
 script:
   - cat package.json

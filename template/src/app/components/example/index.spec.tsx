@@ -6,5 +6,5 @@ import Example from './index'
 import renderer from 'react-test-renderer'
 
 it('renders correctly', () => {
-  renderer.create(<Example />)
+  renderer.create(<Example text='Hello World' />)
 })

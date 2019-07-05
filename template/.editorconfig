@@ -1,0 +1,46 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+# C-style doc comments
+block_comment_start = /*
+block_comment = *
+block_comment_end = */
+
+indent_style = space
+indent_size = 2
+
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.js.snap]
+indent_size = 1
+
+[*.gradle]
+indent_size = 4
+
+# Unfortunately Xcode does not support editorconfig,
+# with or without a plugin. So lets go ahead and ignore
+# the ident_style (tabs vs spaces)
+[ios/**]
+indent_style = ignore
+
+# Lets ignore the indent style because objc code
+# uses a really different way of identing.
+[ios/**/*.{m,h}]
+indent_size = ignore
+
+# Cocoapods are outside of our control,
+# lets ignore them.
+[ios/Pods/**]
+indent_style = ignore
+indent_size = ignore
+end_of_line = ignore
+trim_trailing_whitespace = ignore
+charset = ignore
+insert_final_newline = ignore

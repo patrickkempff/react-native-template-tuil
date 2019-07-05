@@ -1,0 +1,33 @@
+{
+  "name": "ProjectName",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "codequality": "yarn lint && yarn jest && yarn tsc",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-native": "0.60.0",
+    "styled-components": "latest"
+  },
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@types/react": "latest",
+    "@types/react-native": "latest",
+    "@types/react-test-renderer": "latest",
+    "@types/styled-components": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "babel-plugin-module-resolver": "latest",
+    "eclint": "latest",
+    "eslint": "latest",
+    "eslint-config-tuil": "latest",
+    "husky": "latest",
+    "jest": "24.8.0",
+    "react-test-renderer": "16.8.6",
+    "typescript": "latest"
+  }
+}
