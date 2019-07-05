@@ -37,19 +37,14 @@ matrix:
 
 
 install:
-  - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-  - export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-  - nvm install $NODE_VERSION
-  - nvm use $NODE_VERSION
 
-  # - yarn global add react-native-cli
 
 before_script:
+  - export TEMPLATE_PATH="$(pwd)"
   - cd ..
-  - npx react-native init TestApp --template=/home/travis/build/patrickkempff/react-native-template-tuil
-  # - npx react-native init TestApp --template=tuil
-  # - react-native init TestApp --template tuil --version $REACT_NATIVE_VERSION && cd TestApp
+  - npx react-native init TestApp --template=$TEMPLATE_PATH && cd TestApp
 
 script:
   - cat package.json
-  - yarn lint
+  - yarn codequality
+  - npx react-native run-ios
