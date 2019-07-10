@@ -31,7 +31,5 @@
   "devDependencies": {
     "standard": "12.0.1"
   },
-  "dependencies": {
-    "syncyarnlock": "^1.0.12"
-  }
+  "dependencies": {}
 }
