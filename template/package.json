@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "bundle:ios": "react-native bundle --entry-file='./src/index.js' --bundle-output='./ios/ProjectName/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios/ProjectName/Bundle.assets' --sourcemap-output='./ios/ProjectName/main.jsbundle.map'",
     "codequality": "yarn lint && yarn jest && yarn tsc",
     "lint": "eslint .",
     "lint:editorconfig": "editorconfig-checker",
