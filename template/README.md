@@ -1,7 +1,7 @@
 
 <div>
   <br>
-  <img src="./docs/resources/logo2.png" height="360px" />
+  <img src="./docs/resources/logo.png" height="360px" />
   <br>
 </div>
 
