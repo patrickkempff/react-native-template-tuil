@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-tuil",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "description": "Clean and minimalist React Native template for a quick start with TypeScript.",
   "scripts": {
     "lint": "standard postinstall.js",
