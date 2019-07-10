@@ -1,0 +1,37 @@
+{
+  "name": "projectname",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "bundle:ios": "react-native bundle --entry-file='./src/index.js' --bundle-output='./ios/ProjectName/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios/ProjectName/Bundle.assets' --sourcemap-output='./ios/ProjectName/main.jsbundle.map'",
+    "codequality": "yarn lint && yarn jest && yarn tsc",
+    "lint": "eslint .",
+    "lint:editorconfig": "editorconfig-checker",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-native": "0.60.0",
+    "styled-components": "4.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.15",
+    "@types/react": "16.8.23",
+    "@types/react-native": "0.60.0",
+    "@types/react-test-renderer": "16.8.2",
+    "@types/styled-components": "4.1.16",
+    "@typescript-eslint/eslint-plugin": "1.11.0",
+    "@typescript-eslint/parser": "1.11.0",
+    "babel-plugin-module-resolver": "3.2.0",
+    "editorconfig-checker": "2.1.0",
+    "eslint": "6.0.1",
+    "eslint-config-tuil": "0.4.4",
+    "husky": "3.0.0",
+    "jest": "24.8.0",
+    "react-test-renderer": "16.8.6",
+    "typescript": "3.5.3"
+  }
+}
