@@ -8,7 +8,7 @@ Tuil is a template that helps to get you started with React Native using TypeScr
 **Note this template supports react-native ^0.60.0 and react-native-cli ^2.0.0, because of breaking changes in the custom template mechanism.**
 
 ```bash
-npx react-native init MyApp --template=react-native-template-tuil
+npx react-native init MyApp --template=tuil
 ```
 
 This will create a react-native project for iOS and Android. Code Quality ensurance is based on eslint config, pre-commit/push hooks, editorconfig, .nvmrc, .yarnrc, jest & typescript. It creates a ./src folder which contains the react-native code in a domain like structure.
