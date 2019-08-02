@@ -7,10 +7,12 @@
     "ios": "react-native run-ios",
     "android": "react-native run-android",
     "bundle:ios": "react-native bundle --entry-file='./src/index.js' --bundle-output='./ios/ProjectName/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios/ProjectName/Bundle.assets' --sourcemap-output='./ios/ProjectName/main.jsbundle.map'",
-    "codequality": "yarn lint && yarn jest && yarn tsc",
+    "codequality": "yarn format && yarn lint && yarn test && yarn tsc",
     "lint": "eslint .",
     "lint:editorconfig": "editorconfig-checker",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --check \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\"",
+    "fix:format": "prettier --write \"{,!(node_modules|android|ios)/**/}*.js*(x)' \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\""
   },
   "dependencies": {
     "react": "16.8.6",
@@ -25,6 +27,7 @@
     "@types/styled-components": "4.1.16",
     "@typescript-eslint/eslint-plugin": "1.11.0",
     "@typescript-eslint/parser": "1.11.0",
+    "prettier": "1.18.2",
     "babel-plugin-module-resolver": "3.2.0",
     "editorconfig-checker": "2.1.0",
     "eslint": "6.0.1",

@@ -1,4 +1,3 @@
-
 <div>
   <br>
   <img src="./docs/resources/logo.png" height="360px" />
@@ -10,9 +9,8 @@
 [![Bitrise](https://img.shields.io/bitrise/replace_me/master.svg?token=replace_me)](https://app.bitrise.io/app/replace_me)
 [![StandardJS](https://img.shields.io/badge/code%20style-100%25%20standard-F2DE56.svg)](https://standardjs.com/) [![React Native](https://img.shields.io/badge/react--native-v0.60.0-green.svg)](https://github.com/facebook/react-native)
 
-[![Google Play Store](https://img.shields.io/badge/Google-Play%20Store%20(API%20level%2021+)-D1436C.svg)](https://play.google.com/store/apps/details?id=nl.efteling.android&hl=nl)
-[![Apple App Store](https://img.shields.io/badge/Apple-App%20Store%20(iOS%209+)-2DA2F4.svg)](https://itunes.apple.com/nl/app/efteling/id727498391?mt=8)
-
+[![Google Play Store](<https://img.shields.io/badge/Google-Play%20Store%20(API%20level%2021+)-D1436C.svg>)](https://play.google.com/store/apps/details?id=nl.efteling.android&hl=nl)
+[![Apple App Store](<https://img.shields.io/badge/Apple-App%20Store%20(iOS%209+)-2DA2F4.svg>)](https://itunes.apple.com/nl/app/efteling/id727498391?mt=8)
 
 A short description about the app and what is does.
 
@@ -23,17 +21,20 @@ Please see the [installation guide](./docs/installation.md) on how to install th
 ```bash
 git clone git@github.com:company/projectname.git && cd projectname && yarn install
 ```
+
 The Android dependencies will be installed by Gradle when build from the terminal or trough Android Studio. For iOS we use CocoaPods, go ahead and install the ios dependencies by running:
+
 ```bash
 cd ios && bundle exec pod install
 ```
+
 _note: you should run pod install AFTER installing node dependencies with yarn install._
 
+Please look at https://prettier.io/docs/en/editors.html for editor configuration for prettier.
 
 ### Running the app
 
 Now you are good to go. Just open `ios/ProjectName.xcworkspace` in Xcode or import the `android` folder in Android Studio. Make sure that the react-native packager is running `yarn start` from the root of the project.
-
 
 ### More resources
 

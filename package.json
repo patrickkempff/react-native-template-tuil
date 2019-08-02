@@ -4,9 +4,7 @@
   "description": "Clean and minimalist React Native template for a quick start with TypeScript.",
   "scripts": {
     "lint": "standard postinstall.js",
-    "prepublishOnly": "npm --no-git-tag-version version $TRAVIS_TAG",
-    "format": "prettier --check \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\"",
-    "fix:format": "prettier --write \"{,!(node_modules|android|ios)/**/}*.js*(x)' \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\""
+    "prepublishOnly": "npm --no-git-tag-version version $TRAVIS_TAG"
   },
   "repository": {
     "type": "git",
@@ -31,7 +29,6 @@
     "replace": "1.1.0"
   },
   "devDependencies": {
-    "prettier": "1.18.2",
     "standard": "13.0.2"
   },
   "dependencies": {}
