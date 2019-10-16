@@ -12,7 +12,7 @@
     "lint:editorconfig": "editorconfig-checker",
     "test": "jest",
     "format": "prettier --check \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\"",
-    "fix:format": "prettier --write \"{,!(node_modules|android|ios)/**/}*.js*(x)' \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\""
+      "fix:format": "prettier --write \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\""
   },
   "dependencies": {
     "react": "16.8.6",
@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@types/jest": "24.0.15",
-    "@types/react": "16.8.23",
     "@types/react-native": "0.60.0",
     "@types/react-test-renderer": "16.8.2",
     "@types/styled-components": "4.1.16",

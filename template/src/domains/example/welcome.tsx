@@ -40,12 +40,14 @@ const styles = StyleSheet.create({
 })
 
 export default class Welcome extends Component<{}> {
-  render () {
+  render() {
     return (
       <View style={styles.container}>
         <Example text='Tuil' />
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit src/domains/example/placeholder.tsx</Text>
+        <Text style={styles.instructions}>
+          To get started, edit src/domains/example/placeholder.tsx
+        </Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     )
