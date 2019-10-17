@@ -1,4 +1,5 @@
 # :zap: React Native Template Tuil
+
 **Please note that this is WIP and will break from time to time**
 
 [![NPM version][npm-version-image]][npm-url] [![MIT License][license-image]][license] [![Build Status][travis-image]][travis-url]
@@ -15,14 +16,14 @@ This will create a react-native project for iOS and Android. Code Quality ensura
 
 ## Features
 
-* Based on the official React Native template
-* Use the latest dependencies!
-* Ready to go with TypeScript, Testing and Styled Components!
-* Nice domain based folder structure
+- Based on the official React Native template
+- Use the latest dependencies!
+- Ready to go with TypeScript, Testing and Styled Components!
+- Nice domain based folder structure
 
 ## Moving parts
-- The editorconfig is located in .editorconfig
 
+- The editorconfig is located in .editorconfig
 
 ## Lots of ❤️ and credits to the owners and maintainers of these packages:
 
@@ -30,9 +31,7 @@ This will create a react-native project for iOS and Android. Code Quality ensura
 
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg
 [license]: LICENSE
-
 [travis-url]: http://travis-ci.org/patrickkempff/react-native-template-tuil
 [travis-image]: https://travis-ci.org/patrickkempff/react-native-template-tuil.svg?branch=master
-
 [npm-url]: https://npmjs.org/package/react-native-template-tuil
 [npm-version-image]: https://badge.fury.io/js/react-native-template-tuil.svg

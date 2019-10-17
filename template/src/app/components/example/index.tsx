@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
 })
 
 interface Props {
-  text: string;
+  text: string
 }
 
 export default class Example extends Component<Props> {
-  render () {
+  render() {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>{this.props.text}</Text>
