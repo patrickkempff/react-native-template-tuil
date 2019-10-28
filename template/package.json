@@ -12,7 +12,9 @@
     "lint:editorconfig": "editorconfig-checker",
     "test": "jest",
     "format": "prettier --check \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\"",
-      "fix:format": "prettier --write \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\""
+    "fix:format": "prettier --write \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\"",
+    "bitrise-validate":"bitrise validate bitrise.yml",
+    "bitrise-boot":"bitrise :workflow-editor"
   },
   "dependencies": {
     "react": "16.8.6",
