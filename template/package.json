@@ -12,29 +12,28 @@
     "lint:editorconfig": "editorconfig-checker",
     "test": "jest",
     "format": "prettier --check \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\"",
-      "fix:format": "prettier --write \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\""
+    "fix:format": "prettier --write \"{,!(node_modules|android|ios)/**/}*.js*(x)\" \"{,!(node_modules|android|ios)/**/}*.ts*(x)\" \"{,!(node_modules|android|ios)/**/}*.css*\""
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-native": "0.60.0",
-    "styled-components": "4.3.2"
+    "react": "16.13.0",
+    "react-native": "0.61.5",
+    "styled-components": "5.0.1"
   },
   "devDependencies": {
-    "@types/jest": "24.0.15",
-    "@types/react-native": "0.60.0",
-    "@types/react-test-renderer": "16.8.2",
-    "@types/styled-components": "4.1.16",
-    "@typescript-eslint/eslint-plugin": "1.11.0",
-    "@typescript-eslint/parser": "1.11.0",
-    "prettier": "1.18.2",
-    "babel-plugin-module-resolver": "3.2.0",
-    "editorconfig-checker": "2.1.0",
-    "eslint": "6.0.1",
-    "eslint-config-tuil": "0.4.4",
-    "husky": "3.0.0",
-    "jest": "24.8.0",
-    "react-test-renderer": "16.8.6",
-    "typescript": "3.5.3",
-    "patch-package": "6.2.0"
+    "@types/jest": "25.1.3",
+    "@types/react": "16.9.23",
+    "@types/react-native": "0.61.17",
+    "@types/react-test-renderer": "16.9.2",
+    "@types/styled-components": "5.0.1",
+    "@typescript-eslint/eslint-plugin": "2.21.0",
+    "@typescript-eslint/parser": "2.21.0",
+    "babel-plugin-module-resolver": "4.0.0",
+    "editorconfig-checker": "3.0.3",
+    "eslint": "6.8.0",
+    "eslint-config-tuil": "0.5.1",
+    "husky": "4.2.3",
+    "jest": "25.1.0",
+    "react-test-renderer": "16.13.0",
+    "typescript": "3.8.2"
   }
 }
